@@ -1,4 +1,10 @@
-git add *.cpp *.sln *.vcxproj *.vcxproj.filters *.h *.bat *.user
+git add *.cpp 
+git add *.sln 
+git add *.vcxproj 
+git add *.vcxproj.filters 
+git add *.h 
+git add *.bat 
+git add *.user
 git commit -sm "%DATE% %TIME%"
 git push Repo master
 pause
