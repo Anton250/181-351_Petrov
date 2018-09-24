@@ -5,6 +5,7 @@ git add *.vcxproj.filters
 git add *.h 
 git add *.bat 
 git add *.user
+git add *.txt
 git commit -am "%DATE% %TIME%"
 git push Repo master
 pause
