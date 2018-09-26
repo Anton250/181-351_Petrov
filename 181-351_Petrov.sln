@@ -11,7 +11,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lab3_arrays", "Lab3\Lab3.vc
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Caesar_Code", "Caesar_Code\Caesar_Code.vcxproj", "{A9E97218-B0C0-411F-870F-471C9BCCCD44}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Sorting", "Bubble_Sorting\Bubble_Sorting.vcxproj", "{B48FEF74-9083-44C5-84BC-2128C98BC72D}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Sorting", "Sorting\Sorting.vcxproj", "{B48FEF74-9083-44C5-84BC-2128C98BC72D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
