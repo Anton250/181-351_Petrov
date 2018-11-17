@@ -222,18 +222,25 @@ void encrypt_with_many_keys::cycle_file_decode(char * user_text_array)
 	}
 }
 
-void encrypt_with_many_keys::openFile()
+void encrypt_with_many_keys::openUserFile()
 {
 	std::string file_name;
 	std::getline(std::cin, file_name);
 	user_file.open(file_name, std::fstream::in);
 }
 
-void encrypt_with_many_keys::createFile()
+void encrypt_with_many_keys::openDestanationFile()
 {
 	std::string file_name;
 	std::getline(std::cin, file_name);
 	end_file.open(file_name, std::fstream::out);
+}
+
+void encrypt_with_many_keys::openKeysFile()
+{
+	std::string file_name;
+	std::getline(std::cin, file_name);
+	keys_file.open(file_name, std::fstream::in);
 }
 
 void encrypt_with_many_keys::encrypt_for_file()

@@ -28,12 +28,6 @@ public:
 
 	void setRowsAndColumns(int new_rows, int new_columns);
 
-	void setElem(int row, int col, double elem);
-
-	void setColumns(int col);
-
-	void setRows(int row);
-
 	int getRows()
 	{
 		return rows;
@@ -56,5 +50,3 @@ public:
 
 	void print();
 };
-
-

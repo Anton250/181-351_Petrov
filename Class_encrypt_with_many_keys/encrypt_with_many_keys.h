@@ -38,9 +38,11 @@ public:
 
 	void cycle_file_decode(char * user_text_array);
 
-	void openFile();
+	void openUserFile();
 
-	void createFile();
+	void openDestanationFile();
+
+	void openKeysFile();
 
 	void encrypt_for_file();
 
