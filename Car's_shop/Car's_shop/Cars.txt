@@ -1,0 +1,1 @@
+regnum:00001:mark:BMW:model:X1:price:5000$:dateB:21.01.2019:dateS:-:numshop:1;regnum:00002:mark:BMW:model:X1:price:5000$:dateB:21.01.2019:dateS:-:numshop:1;regnum:00003:mark:Lambargini:model:Ultra:price:60000$:dateB:20.02.2019:dateS:-:numshop:3;
