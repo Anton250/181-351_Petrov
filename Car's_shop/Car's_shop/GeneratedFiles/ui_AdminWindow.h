@@ -25,7 +25,7 @@ public:
     {
         if (QtGuiClass->objectName().isEmpty())
             QtGuiClass->setObjectName(QString::fromUtf8("QtGuiClass"));
-        QtGuiClass->resize(546, 484);
+        QtGuiClass->resize(546, 399);
         pushButton_exit = new QPushButton(QtGuiClass);
         pushButton_exit->setObjectName(QString::fromUtf8("pushButton_exit"));
         pushButton_exit->setGeometry(QRect(432, 0, 111, 31));

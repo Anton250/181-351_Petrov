@@ -1,9 +1,9 @@
 #include "Cars_shop.h"
 #include <QMessageBox> 
 #include <fstream>
-int authorize(std::string login, std::string password) {
+int Cars_shop::authorize(std::string login, std::string password, std::string &name) {
 	std::ifstream log_pas;
-	std::string file, login_str;
+	std::string file;
 	log_pas.open("Logins.txt");
 	log_pas.seekg(0, log_pas.end);
 	int lenght = log_pas.tellg();
@@ -11,23 +11,25 @@ int authorize(std::string login, std::string password) {
 	char * buffer = new char[lenght + 1];
 	log_pas.read(buffer, lenght);
 	file = std::string(buffer);
-	if (login == "admin") {
-		if (file.find(login + ":" + password + ";") != std::string::npos) {
-			return 1;
-		}
-		else {
-			return -2;
-		}
+	int pos = file.find("status:manager:login:" + login + ":password:" + password + ':');
+	if (pos != std::string::npos) {
+		info = file.substr(pos, (file.find(";", pos) + 1) - pos);
+		file.erase(0, pos);
+		file.erase(0, file.find("name:") + 5);
+		name = file.substr(0, file.find(':'));
+		return 2;
 	}
-	if (login == "manager") {
-		if (file.find(login + ":" + password + ";") != std::string::npos) {
-			return 2;
-		}
-		else {
-			return -2;
-		}
+	pos = file.find("status:admin:login" + login + ":password:" + password + ":");
+	if (pos != std::string::npos) {
+		info = file.substr(pos, (file.find(";", pos) + 1) - pos);
+		return 2;
 	}
-	if (file.find(login + ":" + password + ";") != std::string::npos) {
+	pos = file.find("status:user:login:" + login + ":password:" + password + ":");
+	if (pos != std::string::npos) {
+		info = file.substr(pos, (file.find(";", pos) + 1) - pos);
+		file.erase(0, pos);
+		file.erase(0, file.find("name:") + 5);
+		name = file.substr(0, file.find(':'));
 		return 0;
 	}
 	else {
@@ -40,29 +42,37 @@ Cars_shop::Cars_shop(QWidget *parent)
 {
 	ui.setupUi(this);
 	
-	connect(&adminWindow, &QtGui::firstWindow, this, &Cars_shop::show);
 	connect(&managerWindow, &ManagerWIndow::firstWindow, this, &Cars_shop::show);
-	connect(&userWindow, &UserWindow::firstWindow, this, &Cars_shop::show);
+	connect(this, &Cars_shop::sendCurUsr, &managerWindow, &ManagerWIndow::writeCurUsr);
+
 }
 void Cars_shop::on_pushButton_auth_clicked() {
 	//Read lineEdits
 	std::string login = ui.lineEdit_login->text().toStdString();
 	std::string password = ui.lineEdit_password->text().toStdString();
-
+	std::string name;
 	QMessageBox msgBox;
-	if (authorize(login, password) == 0) {
-		std::string message = "Hello, user " + login + "!";
+	if (authorize(login, password, name) == 0) {
+
+		std::string message = "Hello, user " + name + "!";
 		msgBox.setText(QString::fromStdString(message));
-		userWindow.show();
+		emit sendCurUsr(info);
+		managerWindow.showInfo();
+		managerWindow.show();
 		this->close();
 	}
-	else if (authorize(login, password) == 1) {
+	else if (authorize(login, password, name) == 1) {
 		msgBox.setText("Hello, Admin!");
-		adminWindow.show();
+		emit sendCurUsr(info);
+		managerWindow.showInfo();
+		managerWindow.show();
 		this->close();
 	}
-	else if (authorize(login, password) == 2) {
-		msgBox.setText("Hello, Manager!");
+	else if (authorize(login, password, name) == 2) {
+		std::string message = "Hello, manager " + name + "!";
+		msgBox.setText(QString::fromStdString(message));
+		emit sendCurUsr(info);
+		managerWindow.showInfo();
 		managerWindow.show();
 		this->close();
 	}
@@ -79,3 +89,4 @@ void Cars_shop::on_pushButton_auth_clicked() {
 	ui.lineEdit_login->clear();
 	ui.lineEdit_password->clear();
 }
+

@@ -2,9 +2,7 @@
 
 #include <QtWidgets/QMainWindow>
 #include "ui_Cars_shop.h"
-#include "AdminWindow.h"
 #include "ManagerWindow.h"
-#include "UserWindow.h"
 
 
 class Cars_shop : public QMainWindow
@@ -14,11 +12,13 @@ class Cars_shop : public QMainWindow
 public:
 	Cars_shop(QWidget *parent = Q_NULLPTR);
 
+signals:
+	void sendCurUsr(std::string);
 private:
 	Ui::Cars_shopClass ui;
-	QtGui adminWindow;
 	ManagerWIndow managerWindow;
-	UserWindow userWindow;
+	int authorize(std::string login, std::string password, std::string &name);
+	std::string info;
 private slots:
 	void on_pushButton_auth_clicked();
 };

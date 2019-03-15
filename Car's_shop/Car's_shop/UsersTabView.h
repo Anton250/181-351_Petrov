@@ -8,20 +8,17 @@
 #include <QMessageBox>
 #include <fstream>
 #include <TableViewFunc.h>
-#include <CarsDataBase.h>
-#include "ui_CarsTableView.h"
+#include <ctime>
+#include <UsersDataBase.h>
+#include "ui_UsersTabView.h"
 
-
-
-class CarsTableView : public QWidget, TableViewFunc, CarsDataBase
+class UsersTabView : public QWidget, TableViewFunc, UsersDataBase
 {
 	Q_OBJECT
 
 public:
-	CarsTableView(QWidget *parent = Q_NULLPTR);
-	~CarsTableView();
-	void closeForUser();
-signals:
+	UsersTabView(QWidget *parent = Q_NULLPTR);
+	~UsersTabView();
 private slots:
 	bool on_pushButton_add_clicked();
 	void on_pushButton_clear_clicked();
@@ -29,8 +26,10 @@ private slots:
 	bool on_pushButton_delete_clicked();
 	bool on_pushButton_edit_clicked();
 private:
-	Ui::CarsTableView ui;
+	Ui::UsersTabView ui;
 	QStandardItemModel * table;
 	QStandardItem * item;
-	void showTable(std::vector <dataBase> DataBase);
+	void showTable(std::vector <dataBaseU> DataBase);
+	bool checkStatus(QString status);
+	bool checkPassword(QString password, QString login);
 };

@@ -5,16 +5,22 @@
     <ClCompile Include="Cars_shop.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="AdminWindow.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="ManagerWIndow.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="UserWindow.cpp">
+    <ClCompile Include="CarsTableView.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="CarsTableView.cpp">
+    <ClCompile Include="UsersTabView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TableViewFunc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CarsDataBase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UsersDataBase.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -44,16 +50,13 @@
     <QtMoc Include="Cars_shop.h">
       <Filter>Header Files</Filter>
     </QtMoc>
-    <QtMoc Include="AdminWIndow.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
     <QtMoc Include="ManagerWIndow.h">
       <Filter>Header Files</Filter>
     </QtMoc>
-    <QtMoc Include="UserWindow.h">
+    <QtMoc Include="CarsTableView.h">
       <Filter>Header Files</Filter>
     </QtMoc>
-    <QtMoc Include="CarsTableView.h">
+    <QtMoc Include="UsersTabView.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>
@@ -61,16 +64,13 @@
     <QtUic Include="Cars_shop.ui">
       <Filter>Form Files</Filter>
     </QtUic>
-    <QtUic Include="AdminWindow.ui">
-      <Filter>Form Files</Filter>
-    </QtUic>
     <QtUic Include="ManagerWIndow.ui">
       <Filter>Form Files</Filter>
     </QtUic>
-    <QtUic Include="UserWindow.ui">
+    <QtUic Include="CarsTableView.ui">
       <Filter>Form Files</Filter>
     </QtUic>
-    <QtUic Include="CarsTableView.ui">
+    <QtUic Include="UsersTabView.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>
@@ -78,5 +78,16 @@
     <QtRcc Include="Cars_shop.qrc">
       <Filter>Resource Files</Filter>
     </QtRcc>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="TableViewFunc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CarsDataBase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UsersDataBase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
