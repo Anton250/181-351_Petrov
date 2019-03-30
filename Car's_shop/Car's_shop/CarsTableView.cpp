@@ -21,6 +21,7 @@ void CarsTableView::closeForUser()
 	ui.pushButton_add->close();
 	ui.pushButton_delete->close();
 	ui.pushButton_edit->close();
+	ui.lineEdit_minPrice->setPlaceholderText("Min");
 }
 
 void CarsTableView::on_pushButton_clear_clicked()
@@ -29,7 +30,8 @@ void CarsTableView::on_pushButton_clear_clicked()
 	ui.lineEdit_mark->clear();
 	ui.lineEdit_model->clear();
 	ui.lineEdit_color->clear();
-	ui.lineEdit_price->clear();
+	ui.lineEdit_minPrice->clear();
+	ui.lineEdit_maxPrice->clear();
 	ui.lineEdit_dateBuy->clear();;
 	ui.lineEdit_dateSell->clear();
 	ui.lineEdit_numberOfShop->clear();
@@ -39,12 +41,13 @@ void CarsTableView::on_pushButton_clear_clicked()
 
 bool CarsTableView::on_pushButton_search_clicked()
 {
-	QString regnum, mark, model, color, price, dateB, dateS, numshop;
+	QString regnum, mark, model, color, minPrice, maxPrice, dateB, dateS, numshop;
 	regnum = ui.lineEdit_registration->text();
 	mark = ui.lineEdit_mark->text();
 	model = ui.lineEdit_model->text();
 	color = ui.lineEdit_color->text();
-	price = ui.lineEdit_price->text();
+	minPrice = ui.lineEdit_minPrice->text();
+	maxPrice = ui.lineEdit_maxPrice->text();
 	dateB = ui.lineEdit_dateBuy->text();
 	dateS = ui.lineEdit_dateSell->text();
 	numshop = ui.lineEdit_numberOfShop->text();
@@ -90,13 +93,27 @@ bool CarsTableView::on_pushButton_search_clicked()
 			isFinded = findElements(4, color.toStdString(), db);
 		}
 	}
-	if (!isEmpty(price)) {
-		if (checkPrice(price)) {
+	if (!isEmpty(minPrice)) {
+		if (checkPrice(minPrice)) {
 			if (searchedDB.size() != 0) {
-				isFinded = findElements(5, price.toStdString(), searchedDB);
+				isFinded = findElements(5, minPrice.toStdString(), searchedDB);
 			}
 			else {
-				isFinded = findElements(5, price.toStdString(), db);
+				isFinded = findElements(5, minPrice.toStdString(), db);
+			}
+		}
+		else {
+			showErrorWithText("Invalid price");
+			return false;
+		}
+	}
+	if (!isEmpty(maxPrice)) {
+		if (checkPrice(maxPrice)) {
+			if (searchedDB.size() != 0) {
+				isFinded = findElements(6, maxPrice.toStdString(), searchedDB);
+			}
+			else {
+				isFinded = findElements(6, maxPrice.toStdString(), db);
 			}
 		}
 		else {
@@ -206,7 +223,7 @@ bool CarsTableView::on_pushButton_edit_clicked()
 	mark = ui.lineEdit_mark->text();
 	model = ui.lineEdit_model->text();
 	color = ui.lineEdit_color->text();
-	price = ui.lineEdit_price->text();
+	price = ui.lineEdit_minPrice->text();
 	dateB = ui.lineEdit_dateBuy->text();
 	dateS = ui.lineEdit_dateSell->text();
 	numshop = ui.lineEdit_numberOfShop->text();
@@ -337,7 +354,7 @@ bool CarsTableView::on_pushButton_add_clicked()
 	mark = ui.lineEdit_mark->text();
 	model = ui.lineEdit_model->text();
 	color = ui.lineEdit_color->text();
-	price = ui.lineEdit_price->text();
+	price = ui.lineEdit_minPrice->text();
 	dateB = ui.lineEdit_dateBuy->text();
 	dateS = ui.lineEdit_dateSell->text();
 	numshop = ui.lineEdit_numberOfShop->text();

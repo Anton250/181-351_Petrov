@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.28010.2016
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Car's_shop", "Car's_shop\Car's_shop.vcxproj", "{B12702AD-ABFB-343A-A199-8E24837244A3}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MyServer", "MyServer\MyServer.vcxproj", "{0C5307E4-ECED-4134-A33C-3915B4639D37}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Client", "Client\Client.vcxproj", "{54E9EEF0-B40D-4C22-98B4-E676F63F4801}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -15,6 +19,14 @@ Global
 		{B12702AD-ABFB-343A-A199-8E24837244A3}.Debug|x64.Build.0 = Debug|x64
 		{B12702AD-ABFB-343A-A199-8E24837244A3}.Release|x64.ActiveCfg = Release|x64
 		{B12702AD-ABFB-343A-A199-8E24837244A3}.Release|x64.Build.0 = Release|x64
+		{0C5307E4-ECED-4134-A33C-3915B4639D37}.Debug|x64.ActiveCfg = Debug|x64
+		{0C5307E4-ECED-4134-A33C-3915B4639D37}.Debug|x64.Build.0 = Debug|x64
+		{0C5307E4-ECED-4134-A33C-3915B4639D37}.Release|x64.ActiveCfg = Release|x64
+		{0C5307E4-ECED-4134-A33C-3915B4639D37}.Release|x64.Build.0 = Release|x64
+		{54E9EEF0-B40D-4C22-98B4-E676F63F4801}.Debug|x64.ActiveCfg = Debug|x64
+		{54E9EEF0-B40D-4C22-98B4-E676F63F4801}.Debug|x64.Build.0 = Debug|x64
+		{54E9EEF0-B40D-4C22-98B4-E676F63F4801}.Release|x64.ActiveCfg = Release|x64
+		{54E9EEF0-B40D-4C22-98B4-E676F63F4801}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

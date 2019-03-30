@@ -81,27 +81,46 @@ bool CarsDataBase::findElements(int critery, std::string strToFind, std::vector<
 		}
 	}
 	if (critery == 5) {
+		strToFind.resize(strToFind.length() - 1);
+		double price = strtod(strToFind.c_str(), NULL);
 		for (int i = 0; i < dBase.size(); i++) {
-			if (dBase[i].price == strToFind) {
-				tmp_DB.push_back(dBase[i]);
-			}
+			
+				std::string minPrice = dBase[i].price;
+				minPrice.resize(minPrice.length() - 1);
+				if (strtod(dBase[i].price.c_str(), NULL) >= price) {
+					tmp_DB.push_back(dBase[i]);
+				}
+			
 		}
 	}
 	if (critery == 6) {
+		strToFind.resize(strToFind.length() - 1);
+		double price = strtod(strToFind.c_str(), NULL);
+		for (int i = 0; i < dBase.size(); i++) {
+		
+				std::string maxPrice = dBase[i].price;
+				maxPrice.resize(maxPrice.length() - 1);
+				if (strtod(dBase[i].price.c_str(), NULL) <= price) {
+					tmp_DB.push_back(dBase[i]);
+				}
+			
+		}
+	}
+	if (critery == 7) {
 		for (int i = 0; i < dBase.size(); i++) {
 			if (dBase[i].dateB == strToFind) {
 				tmp_DB.push_back(dBase[i]);
 			}
 		}
 	}
-	if (critery == 7) {
+	if (critery == 8) {
 		for (int i = 0; i < dBase.size(); i++) {
 			if (dBase[i].dateS == strToFind) {
 				tmp_DB.push_back(dBase[i]);
 			}
 		}
 	}
-	if (critery == 8) {
+	if (critery == 9) {
 		for (int i = 0; i < dBase.size(); i++) {
 			if (dBase[i].numshop == strToFind) {
 				tmp_DB.push_back(dBase[i]);

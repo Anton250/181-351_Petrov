@@ -27,7 +27,7 @@ public:
     QLineEdit *lineEdit_registration;
     QLineEdit *lineEdit_mark;
     QLineEdit *lineEdit_model;
-    QLineEdit *lineEdit_price;
+    QLineEdit *lineEdit_minPrice;
     QLineEdit *lineEdit_dateSell;
     QLineEdit *lineEdit_numberOfShop;
     QLabel *label_Reg;
@@ -45,6 +45,7 @@ public:
     QLabel *label_2;
     QLineEdit *lineEdit_color;
     QPushButton *pushButton_delete;
+    QLineEdit *lineEdit_maxPrice;
 
     void setupUi(QWidget *CarsTableView)
     {
@@ -63,9 +64,9 @@ public:
         lineEdit_model = new QLineEdit(CarsTableView);
         lineEdit_model->setObjectName(QString::fromUtf8("lineEdit_model"));
         lineEdit_model->setGeometry(QRect(110, 640, 113, 22));
-        lineEdit_price = new QLineEdit(CarsTableView);
-        lineEdit_price->setObjectName(QString::fromUtf8("lineEdit_price"));
-        lineEdit_price->setGeometry(QRect(380, 580, 113, 22));
+        lineEdit_minPrice = new QLineEdit(CarsTableView);
+        lineEdit_minPrice->setObjectName(QString::fromUtf8("lineEdit_minPrice"));
+        lineEdit_minPrice->setGeometry(QRect(380, 580, 113, 22));
         lineEdit_dateSell = new QLineEdit(CarsTableView);
         lineEdit_dateSell->setObjectName(QString::fromUtf8("lineEdit_dateSell"));
         lineEdit_dateSell->setGeometry(QRect(380, 640, 113, 22));
@@ -109,7 +110,7 @@ public:
         pushButton_add->setGeometry(QRect(590, 660, 93, 28));
         pushButton_clear = new QPushButton(CarsTableView);
         pushButton_clear->setObjectName(QString::fromUtf8("pushButton_clear"));
-        pushButton_clear->setGeometry(QRect(500, 580, 93, 28));
+        pushButton_clear->setGeometry(QRect(500, 630, 93, 28));
         lineEdit_dateBuy = new QLineEdit(CarsTableView);
         lineEdit_dateBuy->setObjectName(QString::fromUtf8("lineEdit_dateBuy"));
         lineEdit_dateBuy->setGeometry(QRect(380, 610, 113, 22));
@@ -127,6 +128,9 @@ public:
         pushButton_delete = new QPushButton(CarsTableView);
         pushButton_delete->setObjectName(QString::fromUtf8("pushButton_delete"));
         pushButton_delete->setGeometry(QRect(770, 660, 93, 28));
+        lineEdit_maxPrice = new QLineEdit(CarsTableView);
+        lineEdit_maxPrice->setObjectName(QString::fromUtf8("lineEdit_maxPrice"));
+        lineEdit_maxPrice->setGeometry(QRect(500, 580, 113, 22));
 
         retranslateUi(CarsTableView);
 
@@ -136,6 +140,7 @@ public:
     void retranslateUi(QWidget *CarsTableView)
     {
         CarsTableView->setWindowTitle(QApplication::translate("CarsTableView", "CarsTableView", nullptr));
+        lineEdit_minPrice->setPlaceholderText(QApplication::translate("CarsTableView", "Min or Add", nullptr));
         label_Reg->setText(QApplication::translate("CarsTableView", "RegNumber", nullptr));
         label_name->setText(QApplication::translate("CarsTableView", "Mark", nullptr));
         label_price->setText(QApplication::translate("CarsTableView", "Price", nullptr));
@@ -149,6 +154,7 @@ public:
         label->setText(QApplication::translate("CarsTableView", "Model", nullptr));
         label_2->setText(QApplication::translate("CarsTableView", "Color", nullptr));
         pushButton_delete->setText(QApplication::translate("CarsTableView", "Delete", nullptr));
+        lineEdit_maxPrice->setPlaceholderText(QApplication::translate("CarsTableView", "Max", nullptr));
     } // retranslateUi
 
 };

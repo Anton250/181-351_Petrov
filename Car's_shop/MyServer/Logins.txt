@@ -1,0 +1,5 @@
+status:admin:login:admin:password:admin:fstname:-:scndname:-:dateR:-;
+status:manager:login:anton:password:car123:fstname:Anton:scndname:Petrov:dateR:25.01.2018;
+status:user:login:col:password:1234:fstname:Alan:scndname:User:dateR:-;
+status:user:login:new:password:4321:fstname:Corny:scndname:Coldren:dateR:Thu Feb 28 17:32:51 2019;
+status:manager:login:carsShop:password:12345:fstname:Worker:scndname:Hardest:dateR:Thu Mar  7 10:55:57 2019;

@@ -37,11 +37,51 @@ int Cars_shop::authorize(std::string login, std::string password, std::string &n
 	}
 }
 
+void Cars_shop::readFromServer()
+{
+	QString answer = clientSocket->readAll();
+	int pos = answer.toStdString().find("true$");
+	if (pos != std::string::npos) {
+		std::string info = answer.toStdString().erase(0, pos+5);
+		emit sendCurUsr(info);
+		managerWindow.showInfo();
+		managerWindow.show();
+		this->close();
+	}
+	else {
+		QMessageBox msgBox;
+		msgBox.setText("Password is incorrect.");
+		msgBox.setInformativeText("Do you want to try again?");
+		msgBox.setStandardButtons(QMessageBox::Retry | QMessageBox::Close);
+		msgBox.setDefaultButton(QMessageBox::Yes);
+		int res = msgBox.exec();
+		if (res == QMessageBox::Close) {
+			close();
+		}
+	}
+	ui.lineEdit_login->clear();
+	ui.lineEdit_password->clear();
+
+
+}
+
+void Cars_shop::disconnect()
+{
+	clientSocket->deleteLater();
+}
+
 Cars_shop::Cars_shop(QWidget *parent)
 	: QMainWindow(parent)
 {
 	ui.setupUi(this);
-	
+	clientSocket = new QTcpSocket;
+
+	clientSocket->connectToHost("127.0.0.1", 6000);
+
+	connect(clientSocket, &QTcpSocket::readyRead, this, &Cars_shop::readFromServer);
+	connect(clientSocket, &QTcpSocket::disconnected, this, &Cars_shop::disconnect);
+
+
 	connect(&managerWindow, &ManagerWIndow::firstWindow, this, &Cars_shop::show);
 	connect(this, &Cars_shop::sendCurUsr, &managerWindow, &ManagerWIndow::writeCurUsr);
 
@@ -52,41 +92,9 @@ void Cars_shop::on_pushButton_auth_clicked() {
 	std::string password = ui.lineEdit_password->text().toStdString();
 	std::string name;
 	QMessageBox msgBox;
-	if (authorize(login, password, name) == 0) {
-
-		std::string message = "Hello, user " + name + "!";
-		msgBox.setText(QString::fromStdString(message));
-		emit sendCurUsr(info);
-		managerWindow.showInfo();
-		managerWindow.show();
-		this->close();
-	}
-	else if (authorize(login, password, name) == 1) {
-		msgBox.setText("Hello, Admin!");
-		emit sendCurUsr(info);
-		managerWindow.showInfo();
-		managerWindow.show();
-		this->close();
-	}
-	else if (authorize(login, password, name) == 2) {
-		std::string message = "Hello, manager " + name + "!";
-		msgBox.setText(QString::fromStdString(message));
-		emit sendCurUsr(info);
-		managerWindow.showInfo();
-		managerWindow.show();
-		this->close();
-	}
-	else {
-		msgBox.setText("Password is incorrect.");
-		msgBox.setInformativeText("Do you want to try again?");
-		msgBox.setStandardButtons(QMessageBox::Retry | QMessageBox::Close);
-		msgBox.setDefaultButton(QMessageBox::Yes);
-	}
-	int res = msgBox.exec();
-	if (res == QMessageBox::Close) {
-		close();
-	}
-	ui.lineEdit_login->clear();
-	ui.lineEdit_password->clear();
+	QString messageToServer = "login$" + QString::fromStdString(login) + "=" + QString::fromStdString(password);
+	QByteArray arr;
+	arr.append(messageToServer);
+	clientSocket->write(arr);
 }
 
