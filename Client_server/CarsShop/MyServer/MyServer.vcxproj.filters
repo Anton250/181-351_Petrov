@@ -32,10 +32,13 @@
     <ClCompile Include="MyServer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="checkPass.cpp">
+    <ClCompile Include="workWithDB.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="dataBaseFunc.cpp">
+    <ClCompile Include="..\CarsShop\crypto.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CarsShop\TinyAES.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -45,10 +48,13 @@
     </QtMoc>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="checkPass.h">
+    <ClInclude Include="workWithDB.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="dataBaseFunc.h">
+    <ClInclude Include="..\CarsShop\crypto.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CarsShop\TinyAES.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

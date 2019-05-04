@@ -33,18 +33,24 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SecondWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="Client.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SecondWindow.cpp">
+    <ClCompile Include="crypto.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TinyAES.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <QtMoc Include="SecondWindow.h">
+    <QtMoc Include="Client.h">
       <Filter>Header Files</Filter>
     </QtMoc>
-    <QtMoc Include="Client.h">
+    <QtMoc Include="SecondWindow.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>
@@ -60,5 +66,13 @@
     <QtRcc Include="Client.qrc">
       <Filter>Resource Files</Filter>
     </QtRcc>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="crypto.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TinyAES.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

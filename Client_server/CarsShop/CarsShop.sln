@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CarsShop", "CarsShop\CarsShop.vcxproj", "{B12702AD-ABFB-343A-A199-8E24837244A3}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MyServer", "MyServer\MyServer.vcxproj", "{B7DF1292-3F3F-4E14-B42F-5400A5CE6096}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B12702AD-ABFB-343A-A199-8E24837244A3}.Debug|x64.ActiveCfg = Debug|x64
+		{B12702AD-ABFB-343A-A199-8E24837244A3}.Debug|x64.Build.0 = Debug|x64
+		{B12702AD-ABFB-343A-A199-8E24837244A3}.Release|x64.ActiveCfg = Release|x64
+		{B12702AD-ABFB-343A-A199-8E24837244A3}.Release|x64.Build.0 = Release|x64
+		{B7DF1292-3F3F-4E14-B42F-5400A5CE6096}.Debug|x64.ActiveCfg = Debug|x64
+		{B7DF1292-3F3F-4E14-B42F-5400A5CE6096}.Debug|x64.Build.0 = Debug|x64
+		{B7DF1292-3F3F-4E14-B42F-5400A5CE6096}.Release|x64.ActiveCfg = Release|x64
+		{B7DF1292-3F3F-4E14-B42F-5400A5CE6096}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {285FBFF5-96EE-4B0D-A055-C452797EF4E1}
+	EndGlobalSection
+EndGlobal

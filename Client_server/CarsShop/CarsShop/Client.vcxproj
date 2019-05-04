@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{54E9EEF0-B40D-4C22-98B4-E676F63F4801}</ProjectGuid>
+    <Keyword>Qt4VSv1.0</Keyword>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <PropertyGroup Condition="'$(QtMsBuild)'=='' or !Exists('$(QtMsBuild)\qt.targets')">
+    <QtMsBuild>$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.props')">
+    <Import Project="$(QtMsBuild)\qt.props" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PreprocessorDefinitions>UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_GUI_LIB;QT_NETWORK_LIB;QT_SQL_LIB;QT_CORE_LIB;QT_WIDGETS_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtWidgets;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Disabled</Optimization>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
+      <AdditionalLibraryDirectories>$(QTDIR)lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>qtmaind.lib;Qt5Guid.lib;Qt5Networkd.lib;Qt5Sqld.lib;Qt5Cored.lib;Qt5Widgetsd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <QtMoc>
+      <OutputFile>.$(QTDIR)GeneratedFiles$(QTDIR)$(ConfigurationName)$(QTDIR)moc_%(Filename).cpp</OutputFile>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <IncludePath>.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtWidgets;%(AdditionalIncludeDirectories)</IncludePath>
+      <Define>UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_GUI_LIB;QT_NETWORK_LIB;QT_SQL_LIB;QT_CORE_LIB;QT_WIDGETS_LIB;%(PreprocessorDefinitions)</Define>
+      <QTDIR>C:\Users\antos\OneDrive\Рабочий стол\GitHubReposytory</QTDIR>
+    </QtMoc>
+    <QtUic>
+      <ExecutionDescription>Uic'ing %(Identity)...</ExecutionDescription>
+      <OutputFile>.$(QTDIR)GeneratedFiles$(QTDIR)ui_%(Filename).h</OutputFile>
+      <QTDIR>C:\Users\antos\OneDrive\Рабочий стол\GitHubReposytory</QTDIR>
+    </QtUic>
+    <QtRcc>
+      <ExecutionDescription>Rcc'ing %(Identity)...</ExecutionDescription>
+      <OutputFile>.$(QTDIR)GeneratedFiles$(QTDIR)qrc_%(Filename).cpp</OutputFile>
+      <QTDIR>C:\Users\antos\OneDrive\Рабочий стол\GitHubReposytory</QTDIR>
+    </QtRcc>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PreprocessorDefinitions>UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_GUI_LIB;QT_NETWORK_LIB;QT_SQL_LIB;QT_CORE_LIB;QT_WIDGETS_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);C:\Users\antos\OneDrive\Рабочий стол\GitHubReposytory\Car%27s_shop\Client;C:\Users\antos\OneDrive\Рабочий стол\GitHubReposytory\Car%27s_shop\Client\GeneratedFiles;$(QTDIR)\include;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtWidgets;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Disabled</Optimization>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
+      <AdditionalLibraryDirectories>$(QTDIR)lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>qtmaind.lib;Qt5Guid.lib;Qt5Networkd.lib;Qt5Sqld.lib;Qt5Cored.lib;Qt5Widgetsd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <QtMoc>
+      <OutputFile>.$(QTDIR)GeneratedFiles$(QTDIR)$(ConfigurationName)$(QTDIR)moc_%(Filename).cpp</OutputFile>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <IncludePath>.\GeneratedFiles\$(ConfigurationName);C:\Users\antos\OneDrive\Рабочий стол\GitHubReposytory\Car%27s_shop\Client;C:\Users\antos\OneDrive\Рабочий стол\GitHubReposytory\Car%27s_shop\Client\GeneratedFiles;$(QTDIR)\include;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtWidgets;%(AdditionalIncludeDirectories)</IncludePath>
+      <Define>UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_GUI_LIB;QT_NETWORK_LIB;QT_SQL_LIB;QT_CORE_LIB;QT_WIDGETS_LIB;%(PreprocessorDefinitions)</Define>
+      <QTDIR>C:\Users\antos\OneDrive\Рабочий стол\GitHubReposytory</QTDIR>
+    </QtMoc>
+    <QtUic>
+      <ExecutionDescription>Uic'ing %(Identity)...</ExecutionDescription>
+      <OutputFile>.$(QTDIR)GeneratedFiles$(QTDIR)ui_%(Filename).h</OutputFile>
+      <QTDIR>C:\Users\antos\OneDrive\Рабочий стол\GitHubReposytory</QTDIR>
+    </QtUic>
+    <QtRcc>
+      <ExecutionDescription>Rcc'ing %(Identity)...</ExecutionDescription>
+      <OutputFile>.$(QTDIR)GeneratedFiles$(QTDIR)qrc_%(Filename).cpp</OutputFile>
+      <QTDIR>C:\Users\antos\OneDrive\Рабочий стол\GitHubReposytory</QTDIR>
+    </QtRcc>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PreprocessorDefinitions>UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_NO_DEBUG;NDEBUG;QT_GUI_LIB;QT_NETWORK_LIB;QT_SQL_LIB;QT_CORE_LIB;QT_WIDGETS_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:$(QTDIR)Users$(QTDIR)antos$(QTDIR)OneDrive$(QTDIR)Рабочий стол$(QTDIR)GitHubReposytory$(QTDIR)Car%27s_shop$(QTDIR)Client$(QTDIR)GeneratedFiles;C:$(QTDIR)Users$(QTDIR)antos$(QTDIR)OneDrive$(QTDIR)Рабочий стол$(QTDIR)GitHubReposytory$(QTDIR)Car%27s_shop$(QTDIR)Client;$(QTDIR)include;C:$(QTDIR)Users$(QTDIR)antos$(QTDIR)OneDrive$(QTDIR)Рабочий стол$(QTDIR)GitHubReposytory$(QTDIR)Car%27s_shop$(QTDIR)Client$(QTDIR)GeneratedFiles$(QTDIR)$(ConfigurationName);$(QTDIR)include$(QTDIR)QtGui;$(QTDIR)include$(QTDIR)QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtWidgets;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat />
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
+      <AdditionalLibraryDirectories>$(QTDIR)lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalDependencies>qtmain.lib;Qt5Gui.lib;Qt5Network.lib;Qt5Sql.lib;Qt5Core.lib;Qt5Widgets.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <QtMoc>
+      <OutputFile>.$(QTDIR)GeneratedFiles$(QTDIR)$(ConfigurationName)$(QTDIR)moc_%(Filename).cpp</OutputFile>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <IncludePath>C:$(QTDIR)Users$(QTDIR)antos$(QTDIR)OneDrive$(QTDIR)Рабочий стол$(QTDIR)GitHubReposytory$(QTDIR)Car%27s_shop$(QTDIR)Client$(QTDIR)GeneratedFiles;C:$(QTDIR)Users$(QTDIR)antos$(QTDIR)OneDrive$(QTDIR)Рабочий стол$(QTDIR)GitHubReposytory$(QTDIR)Car%27s_shop$(QTDIR)Client;$(QTDIR)include;C:$(QTDIR)Users$(QTDIR)antos$(QTDIR)OneDrive$(QTDIR)Рабочий стол$(QTDIR)GitHubReposytory$(QTDIR)Car%27s_shop$(QTDIR)Client$(QTDIR)GeneratedFiles$(QTDIR)$(ConfigurationName);$(QTDIR)include$(QTDIR)QtGui;$(QTDIR)include$(QTDIR)QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtWidgets;%(AdditionalIncludeDirectories)</IncludePath>
+      <Define>UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_NO_DEBUG;NDEBUG;QT_GUI_LIB;QT_NETWORK_LIB;QT_SQL_LIB;QT_CORE_LIB;QT_WIDGETS_LIB;%(PreprocessorDefinitions)</Define>
+      <QTDIR>C:\Users\antos\OneDrive\Рабочий стол\GitHubReposytory</QTDIR>
+    </QtMoc>
+    <QtUic>
+      <ExecutionDescription>Uic'ing %(Identity)...</ExecutionDescription>
+      <OutputFile>.$(QTDIR)GeneratedFiles$(QTDIR)ui_%(Filename).h</OutputFile>
+      <QTDIR>C:\Users\antos\OneDrive\Рабочий стол\GitHubReposytory</QTDIR>
+    </QtUic>
+    <QtRcc>
+      <ExecutionDescription>Rcc'ing %(Identity)...</ExecutionDescription>
+      <OutputFile>.$(QTDIR)GeneratedFiles$(QTDIR)qrc_%(Filename).cpp</OutputFile>
+      <QTDIR>C:\Users\antos\OneDrive\Рабочий стол\GitHubReposytory</QTDIR>
+    </QtRcc>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PreprocessorDefinitions>UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_NO_DEBUG;NDEBUG;QT_GUI_LIB;QT_NETWORK_LIB;QT_SQL_LIB;QT_CORE_LIB;QT_WIDGETS_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:$(QTDIR)Users$(QTDIR)antos$(QTDIR)OneDrive$(QTDIR)Рабочий стол$(QTDIR)GitHubReposytory$(QTDIR)Car%27s_shop$(QTDIR)Client$(QTDIR)GeneratedFiles;C:$(QTDIR)Users$(QTDIR)antos$(QTDIR)OneDrive$(QTDIR)Рабочий стол$(QTDIR)GitHubReposytory$(QTDIR)Car%27s_shop$(QTDIR)Client;$(QTDIR)include;C:$(QTDIR)Users$(QTDIR)antos$(QTDIR)OneDrive$(QTDIR)Рабочий стол$(QTDIR)GitHubReposytory$(QTDIR)Car%27s_shop$(QTDIR)Client$(QTDIR)GeneratedFiles$(QTDIR)$(ConfigurationName);$(QTDIR)include$(QTDIR)QtGui;$(QTDIR)include$(QTDIR)QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtWidgets;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
+      <AdditionalLibraryDirectories>$(QTDIR)lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalDependencies>qtmain.lib;Qt5Gui.lib;Qt5Network.lib;Qt5Sql.lib;Qt5Core.lib;Qt5Widgets.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <QtMoc>
+      <OutputFile>.$(QTDIR)GeneratedFiles$(QTDIR)$(ConfigurationName)$(QTDIR)moc_%(Filename).cpp</OutputFile>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <IncludePath>C:$(QTDIR)Users$(QTDIR)antos$(QTDIR)OneDrive$(QTDIR)Рабочий стол$(QTDIR)GitHubReposytory$(QTDIR)Car%27s_shop$(QTDIR)Client$(QTDIR)GeneratedFiles;C:$(QTDIR)Users$(QTDIR)antos$(QTDIR)OneDrive$(QTDIR)Рабочий стол$(QTDIR)GitHubReposytory$(QTDIR)Car%27s_shop$(QTDIR)Client;$(QTDIR)include;C:$(QTDIR)Users$(QTDIR)antos$(QTDIR)OneDrive$(QTDIR)Рабочий стол$(QTDIR)GitHubReposytory$(QTDIR)Car%27s_shop$(QTDIR)Client$(QTDIR)GeneratedFiles$(QTDIR)$(ConfigurationName);$(QTDIR)include$(QTDIR)QtGui;$(QTDIR)include$(QTDIR)QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtWidgets;%(AdditionalIncludeDirectories)</IncludePath>
+      <Define>UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_NO_DEBUG;NDEBUG;QT_GUI_LIB;QT_NETWORK_LIB;QT_SQL_LIB;QT_CORE_LIB;QT_WIDGETS_LIB;%(PreprocessorDefinitions)</Define>
+      <QTDIR>C:\Users\antos\OneDrive\Рабочий стол\GitHubReposytory</QTDIR>
+    </QtMoc>
+    <QtUic>
+      <ExecutionDescription>Uic'ing %(Identity)...</ExecutionDescription>
+      <OutputFile>.$(QTDIR)GeneratedFiles$(QTDIR)ui_%(Filename).h</OutputFile>
+      <QTDIR>C:\Users\antos\OneDrive\Рабочий стол\GitHubReposytory</QTDIR>
+    </QtUic>
+    <QtRcc>
+      <ExecutionDescription>Rcc'ing %(Identity)...</ExecutionDescription>
+      <OutputFile>.$(QTDIR)GeneratedFiles$(QTDIR)qrc_%(Filename).cpp</OutputFile>
+      <QTDIR>C:\Users\antos\OneDrive\Рабочий стол\GitHubReposytory</QTDIR>
+    </QtRcc>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Client.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="SecondWindow.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="Client.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.$(QTDIR)GeneratedFiles;.;$(QTDIR)include;.$(QTDIR)GeneratedFiles$(QTDIR)$(ConfigurationName);$(QTDIR)include$(QTDIR)QtGui;$(QTDIR)include$(QTDIR)QtANGLE;%(AdditionalIncludeDirectories)</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.$(QTDIR)GeneratedFiles;.;$(QTDIR)include;.$(QTDIR)GeneratedFiles$(QTDIR)$(ConfigurationName);$(QTDIR)include$(QTDIR)QtGui;$(QTDIR)include$(QTDIR)QtANGLE;%(AdditionalIncludeDirectories)</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.$(QTDIR)GeneratedFiles;.;$(QTDIR)include;.$(QTDIR)GeneratedFiles$(QTDIR)$(ConfigurationName);$(QTDIR)include$(QTDIR)QtGui;$(QTDIR)include$(QTDIR)QtANGLE;%(AdditionalIncludeDirectories)</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.$(QTDIR)GeneratedFiles;.;$(QTDIR)include;.$(QTDIR)GeneratedFiles$(QTDIR)$(ConfigurationName);$(QTDIR)include$(QTDIR)QtGui;$(QTDIR)include$(QTDIR)QtANGLE;%(AdditionalIncludeDirectories)</IncludePath>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="Client.ui" />
+    <QtUic Include="SecondWindow.ui" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="Client.qrc" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="SecondWindow.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.$(QTDIR)GeneratedFiles;.;$(QTDIR)include;.$(QTDIR)GeneratedFiles$(QTDIR)$(ConfigurationName);$(QTDIR)include$(QTDIR)QtCore;$(QTDIR)include$(QTDIR)QtGui;$(QTDIR)include$(QTDIR)QtANGLE;$(QTDIR)include$(QTDIR)QtNetwork;$(QTDIR)include$(QTDIR)QtSql;$(QTDIR)include$(QTDIR)QtWidgets</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.$(QTDIR)GeneratedFiles;.;$(QTDIR)include;.$(QTDIR)GeneratedFiles$(QTDIR)$(ConfigurationName);$(QTDIR)include$(QTDIR)QtCore;$(QTDIR)include$(QTDIR)QtGui;$(QTDIR)include$(QTDIR)QtANGLE;$(QTDIR)include$(QTDIR)QtNetwork;$(QTDIR)include$(QTDIR)QtSql;$(QTDIR)include$(QTDIR)QtWidgets</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.$(QTDIR)GeneratedFiles;.;$(QTDIR)include;.$(QTDIR)GeneratedFiles$(QTDIR)$(ConfigurationName);$(QTDIR)include$(QTDIR)QtCore;$(QTDIR)include$(QTDIR)QtGui;$(QTDIR)include$(QTDIR)QtANGLE;$(QTDIR)include$(QTDIR)QtNetwork;$(QTDIR)include$(QTDIR)QtSql;$(QTDIR)include$(QTDIR)QtWidgets</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.$(QTDIR)GeneratedFiles;.;$(QTDIR)include;.$(QTDIR)GeneratedFiles$(QTDIR)$(ConfigurationName);$(QTDIR)include$(QTDIR)QtCore;$(QTDIR)include$(QTDIR)QtGui;$(QTDIR)include$(QTDIR)QtANGLE;$(QTDIR)include$(QTDIR)QtNetwork;$(QTDIR)include$(QTDIR)QtSql;$(QTDIR)include$(QTDIR)QtWidgets</IncludePath>
+    </QtMoc>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties MocDir=".\GeneratedFiles\$(ConfigurationName)" UicDir=".\GeneratedFiles" RccDir=".\GeneratedFiles" lupdateOptions="" lupdateOnBuild="1" lreleaseOptions="" Qt5Version_x0020_x64="msvc2017_64" MocOptions="" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

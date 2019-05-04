@@ -4,9 +4,10 @@
 #include <QTcpServer>
 #include <QTcpSocket>
 #include <QMap>
-#include "checkPass.h"
+#include <crypto.h>
+#include "workWithDB.h"
 
-class MyServer : public QObject, public checkPass
+class MyServer : public QObject, public workWithDB, public crypto
 {
 	Q_OBJECT
 
