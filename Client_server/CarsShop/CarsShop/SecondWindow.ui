@@ -1,0 +1,1091 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SecondWindow</class>
+ <widget class="QWidget" name="SecondWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1035</width>
+    <height>565</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>SecondWindow</string>
+  </property>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1041</width>
+     <height>571</height>
+    </rect>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <widget class="QWidget" name="carsTab">
+    <attribute name="title">
+     <string>Cars</string>
+    </attribute>
+    <widget class="QTableView" name="carsTable">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>100</y>
+       <width>1031</width>
+       <height>441</height>
+      </rect>
+     </property>
+     <attribute name="verticalHeaderVisible">
+      <bool>false</bool>
+     </attribute>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_carId">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>113</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="inputMask">
+      <string>D9999999999</string>
+     </property>
+     <property name="maxLength">
+      <number>11</number>
+     </property>
+     <property name="placeholderText">
+      <string>Reg number</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_minPrice">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>113</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="inputMask">
+      <string>D999999999</string>
+     </property>
+     <property name="placeholderText">
+      <string>Min price</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_mark">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>10</y>
+       <width>113</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="inputMask">
+      <string>&gt;A&lt;aaaaaaaaaaaaaaaaaaa</string>
+     </property>
+     <property name="maxLength">
+      <number>20</number>
+     </property>
+     <property name="placeholderText">
+      <string>Mark</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_model">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>10</y>
+       <width>113</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="inputMask">
+      <string>&gt;N&lt;nnnnnnnnnnnnnnnnnnn</string>
+     </property>
+     <property name="placeholderText">
+      <string>Model</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_color">
+     <property name="geometry">
+      <rect>
+       <x>370</x>
+       <y>10</y>
+       <width>113</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="inputMask">
+      <string>&gt;A&lt;aaaaaaaaaaaaaaaaaaa</string>
+     </property>
+     <property name="placeholderText">
+      <string>Color</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_numShop">
+     <property name="geometry">
+      <rect>
+       <x>490</x>
+       <y>10</y>
+       <width>113</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="inputMask">
+      <string>D9</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="placeholderText">
+      <string>Shop number</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_maxPrice">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>70</y>
+       <width>113</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="inputMask">
+      <string>D999999999</string>
+     </property>
+     <property name="placeholderText">
+      <string>Max price</string>
+     </property>
+    </widget>
+    <widget class="QDateEdit" name="minDateB">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>40</y>
+       <width>110</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="displayFormat">
+      <string>yyyy-MM-dd</string>
+     </property>
+     <property name="calendarPopup">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QDateEdit" name="maxDateB">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>70</y>
+       <width>110</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="displayFormat">
+      <string>yyyy-MM-dd</string>
+     </property>
+     <property name="calendarPopup">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_minDateB">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>40</y>
+       <width>111</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Min date of buy</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_maxDateB">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>70</y>
+       <width>101</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Max date of buy</string>
+     </property>
+    </widget>
+    <widget class="QDateEdit" name="minDateS">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>490</x>
+       <y>40</y>
+       <width>110</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="wrapping">
+      <bool>false</bool>
+     </property>
+     <property name="frame">
+      <bool>true</bool>
+     </property>
+     <property name="readOnly">
+      <bool>false</bool>
+     </property>
+     <property name="specialValueText">
+      <string/>
+     </property>
+     <property name="accelerated">
+      <bool>false</bool>
+     </property>
+     <property name="correctionMode">
+      <enum>QAbstractSpinBox::CorrectToPreviousValue</enum>
+     </property>
+     <property name="keyboardTracking">
+      <bool>true</bool>
+     </property>
+     <property name="showGroupSeparator" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="dateTime">
+      <datetime>
+       <hour>0</hour>
+       <minute>0</minute>
+       <second>0</second>
+       <year>2000</year>
+       <month>1</month>
+       <day>1</day>
+      </datetime>
+     </property>
+     <property name="minimumDateTime">
+      <datetime>
+       <hour>0</hour>
+       <minute>0</minute>
+       <second>0</second>
+       <year>1753</year>
+       <month>9</month>
+       <day>14</day>
+      </datetime>
+     </property>
+     <property name="currentSection">
+      <enum>QDateTimeEdit::YearSection</enum>
+     </property>
+     <property name="displayFormat">
+      <string>yyyy-MM-dd</string>
+     </property>
+     <property name="calendarPopup">
+      <bool>true</bool>
+     </property>
+     <property name="currentSectionIndex">
+      <number>0</number>
+     </property>
+     <property name="date">
+      <date>
+       <year>2000</year>
+       <month>1</month>
+       <day>1</day>
+      </date>
+     </property>
+    </widget>
+    <widget class="QDateEdit" name="maxDateS">
+     <property name="geometry">
+      <rect>
+       <x>490</x>
+       <y>70</y>
+       <width>110</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="displayFormat">
+      <string>yyyy-MM-dd</string>
+     </property>
+     <property name="calendarPopup">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_minDateS">
+     <property name="geometry">
+      <rect>
+       <x>380</x>
+       <y>40</y>
+       <width>111</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Min date of sell</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_maxDateS">
+     <property name="geometry">
+      <rect>
+       <x>380</x>
+       <y>70</y>
+       <width>111</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Max date of sell</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_carsClear">
+     <property name="geometry">
+      <rect>
+       <x>620</x>
+       <y>10</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Clear</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_searchCars">
+     <property name="geometry">
+      <rect>
+       <x>620</x>
+       <y>40</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Search</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_enableEditCars">
+     <property name="geometry">
+      <rect>
+       <x>720</x>
+       <y>10</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Edit</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_editCars">
+     <property name="geometry">
+      <rect>
+       <x>620</x>
+       <y>70</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Edit</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_deleteCars">
+     <property name="geometry">
+      <rect>
+       <x>720</x>
+       <y>70</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Delete</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_addCars">
+     <property name="geometry">
+      <rect>
+       <x>620</x>
+       <y>40</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Add</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_disableEditCars">
+     <property name="geometry">
+      <rect>
+       <x>720</x>
+       <y>40</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Cancel</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_dateB">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>70</y>
+       <width>171</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Don't change date of buy</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_dateS">
+     <property name="geometry">
+      <rect>
+       <x>440</x>
+       <y>70</y>
+       <width>191</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Don't change date of sell</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_minDateB">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>40</y>
+       <width>16</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_maxDateB">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>70</y>
+       <width>21</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_minDateS">
+     <property name="geometry">
+      <rect>
+       <x>470</x>
+       <y>40</y>
+       <width>16</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_maxDateS">
+     <property name="geometry">
+      <rect>
+       <x>470</x>
+       <y>70</y>
+       <width>16</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <zorder>checkBox_dateS</zorder>
+    <zorder>checkBox_dateB</zorder>
+    <zorder>carsTable</zorder>
+    <zorder>lineEdit_carId</zorder>
+    <zorder>lineEdit_minPrice</zorder>
+    <zorder>lineEdit_mark</zorder>
+    <zorder>lineEdit_model</zorder>
+    <zorder>lineEdit_color</zorder>
+    <zorder>lineEdit_numShop</zorder>
+    <zorder>lineEdit_maxPrice</zorder>
+    <zorder>minDateB</zorder>
+    <zorder>maxDateB</zorder>
+    <zorder>label_minDateB</zorder>
+    <zorder>label_maxDateB</zorder>
+    <zorder>minDateS</zorder>
+    <zorder>maxDateS</zorder>
+    <zorder>label_minDateS</zorder>
+    <zorder>label_maxDateS</zorder>
+    <zorder>pushButton_carsClear</zorder>
+    <zorder>pushButton_searchCars</zorder>
+    <zorder>pushButton_enableEditCars</zorder>
+    <zorder>pushButton_editCars</zorder>
+    <zorder>pushButton_deleteCars</zorder>
+    <zorder>pushButton_addCars</zorder>
+    <zorder>pushButton_disableEditCars</zorder>
+    <zorder>checkBox_minDateB</zorder>
+    <zorder>checkBox_maxDateB</zorder>
+    <zorder>checkBox_minDateS</zorder>
+    <zorder>checkBox_maxDateS</zorder>
+   </widget>
+   <widget class="QWidget" name="usersTab">
+    <attribute name="title">
+     <string>Users</string>
+    </attribute>
+    <widget class="QTableView" name="usersTable">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>90</y>
+       <width>1031</width>
+       <height>451</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_status">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>10</y>
+       <width>113</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="inputMask">
+      <string>aaaaaaaaaa</string>
+     </property>
+     <property name="placeholderText">
+      <string>Status</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_login">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>50</y>
+       <width>113</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="placeholderText">
+      <string>Login</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_fName">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>10</y>
+       <width>113</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="inputMask">
+      <string>&gt;A&lt;AAAaaaaaaaaaaa</string>
+     </property>
+     <property name="placeholderText">
+      <string>First name</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_password">
+     <property name="geometry">
+      <rect>
+       <x>240</x>
+       <y>50</y>
+       <width>113</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="placeholderText">
+      <string>Password</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_lName">
+     <property name="geometry">
+      <rect>
+       <x>240</x>
+       <y>10</y>
+       <width>113</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="inputMask">
+      <string>&gt;A&lt;AAAaaaaaaaaaaa</string>
+     </property>
+     <property name="placeholderText">
+      <string>Second name</string>
+     </property>
+    </widget>
+    <widget class="QDateEdit" name="minDateR">
+     <property name="geometry">
+      <rect>
+       <x>520</x>
+       <y>10</y>
+       <width>110</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="displayFormat">
+      <string>dd-MM-yyyy</string>
+     </property>
+    </widget>
+    <widget class="QDateEdit" name="maxDateR">
+     <property name="geometry">
+      <rect>
+       <x>520</x>
+       <y>50</y>
+       <width>110</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="displayFormat">
+      <string>dd-MM-yyyy</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_minDateR">
+     <property name="geometry">
+      <rect>
+       <x>360</x>
+       <y>10</y>
+       <width>151</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Min date of regestration</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_maxDateR">
+     <property name="geometry">
+      <rect>
+       <x>360</x>
+       <y>50</y>
+       <width>141</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Max date of regestration</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_clearUsers">
+     <property name="geometry">
+      <rect>
+       <x>640</x>
+       <y>10</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Clear</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_searchUsers">
+     <property name="geometry">
+      <rect>
+       <x>640</x>
+       <y>50</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Search</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_enableEditUsers">
+     <property name="geometry">
+      <rect>
+       <x>740</x>
+       <y>10</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Edit</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_addUsers">
+     <property name="geometry">
+      <rect>
+       <x>640</x>
+       <y>50</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Add</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_deleteUsers">
+     <property name="geometry">
+      <rect>
+       <x>740</x>
+       <y>50</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Delete</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_editUsers">
+     <property name="geometry">
+      <rect>
+       <x>740</x>
+       <y>10</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Edit</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_cancelUsers">
+     <property name="geometry">
+      <rect>
+       <x>840</x>
+       <y>10</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Cancel</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_IDUsers">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>50</y>
+       <width>113</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="inputMask">
+      <string>D99999</string>
+     </property>
+     <property name="placeholderText">
+      <string>ID</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_minDateR">
+     <property name="geometry">
+      <rect>
+       <x>500</x>
+       <y>10</y>
+       <width>16</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_maxDateR">
+     <property name="geometry">
+      <rect>
+       <x>500</x>
+       <y>50</y>
+       <width>20</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <zorder>usersTable</zorder>
+    <zorder>lineEdit_status</zorder>
+    <zorder>lineEdit_login</zorder>
+    <zorder>lineEdit_fName</zorder>
+    <zorder>lineEdit_password</zorder>
+    <zorder>lineEdit_lName</zorder>
+    <zorder>minDateR</zorder>
+    <zorder>maxDateR</zorder>
+    <zorder>label_minDateR</zorder>
+    <zorder>label_maxDateR</zorder>
+    <zorder>pushButton_clearUsers</zorder>
+    <zorder>pushButton_enableEditUsers</zorder>
+    <zorder>pushButton_addUsers</zorder>
+    <zorder>pushButton_deleteUsers</zorder>
+    <zorder>pushButton_editUsers</zorder>
+    <zorder>pushButton_searchUsers</zorder>
+    <zorder>pushButton_cancelUsers</zorder>
+    <zorder>lineEdit_IDUsers</zorder>
+    <zorder>checkBox_minDateR</zorder>
+    <zorder>checkBox_maxDateR</zorder>
+   </widget>
+   <widget class="QWidget" name="settings">
+    <attribute name="title">
+     <string>Settings</string>
+    </attribute>
+    <widget class="QLabel" name="label_lName">
+     <property name="geometry">
+      <rect>
+       <x>270</x>
+       <y>130</y>
+       <width>71</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Last name:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lName">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>130</y>
+       <width>141</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>lname</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_status">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>90</y>
+       <width>41</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Status:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="status">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>90</y>
+       <width>101</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>status</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_fName">
+     <property name="geometry">
+      <rect>
+       <x>270</x>
+       <y>110</y>
+       <width>71</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>First name:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="fName">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>110</y>
+       <width>141</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>name</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_changeLogin">
+     <property name="geometry">
+      <rect>
+       <x>342</x>
+       <y>160</y>
+       <width>111</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Change login</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_confirmNewLogin">
+     <property name="geometry">
+      <rect>
+       <x>460</x>
+       <y>160</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Ok</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_changePassword">
+     <property name="geometry">
+      <rect>
+       <x>342</x>
+       <y>190</y>
+       <width>111</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Change password</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_confirmNewPassword">
+     <property name="geometry">
+      <rect>
+       <x>460</x>
+       <y>190</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Ok</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_newLogin">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>160</y>
+       <width>113</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="placeholderText">
+      <string>New login</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_newPassword">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>190</y>
+       <width>113</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="placeholderText">
+      <string>New password</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_dateOfR">
+     <property name="geometry">
+      <rect>
+       <x>224</x>
+       <y>230</y>
+       <width>121</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Date of regestration:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="dateOfR">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>230</y>
+       <width>91</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>DateR</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_cancelNewLogin">
+     <property name="geometry">
+      <rect>
+       <x>560</x>
+       <y>160</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Cancel</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_cancelNewPassword">
+     <property name="geometry">
+      <rect>
+       <x>560</x>
+       <y>190</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Cancel</string>
+     </property>
+    </widget>
+    <zorder>label_lName</zorder>
+    <zorder>lName</zorder>
+    <zorder>label_status</zorder>
+    <zorder>status</zorder>
+    <zorder>label_fName</zorder>
+    <zorder>fName</zorder>
+    <zorder>pushButton_confirmNewLogin</zorder>
+    <zorder>pushButton_confirmNewPassword</zorder>
+    <zorder>lineEdit_newLogin</zorder>
+    <zorder>lineEdit_newPassword</zorder>
+    <zorder>label_dateOfR</zorder>
+    <zorder>dateOfR</zorder>
+    <zorder>pushButton_changeLogin</zorder>
+    <zorder>pushButton_cancelNewLogin</zorder>
+    <zorder>pushButton_changePassword</zorder>
+    <zorder>pushButton_cancelNewPassword</zorder>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="pushButton_exit">
+   <property name="geometry">
+    <rect>
+     <x>910</x>
+     <y>0</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

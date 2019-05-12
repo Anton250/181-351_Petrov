@@ -6,6 +6,7 @@ git add *.h
 git add *.bat 
 git add *.user
 git add *.txt
+git add *.ui
 git commit -am "%DATE% %TIME%"
 git push Repo master
 pause
